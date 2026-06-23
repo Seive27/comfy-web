@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COMFY SKILL /// SETUP</title>
+  <meta name="description" content="Get started with Comfy Skill in one command. No config, no framework lock-in." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav" id="nav" role="navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Comfy Skill home">
+        <span class="nav-logo-mark" style="color:var(--red);">[CS]</span>
+        <span>Comfy Skill</span>
+        <span class="nav-badge">v1.0</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="setup.html" class="active">Setup</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="https://github.com/Seive27/comfy-skill.git" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+      <button class="nav-mobile-toggle" aria-label="Menu" aria-expanded="false">MENU</button>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <section class="page-header section-accent">
+    <div class="container">
+      <div class="section-label">SETUP</div>
+      <h1>Start in one command</h1>
+      <p>Add Comfy Skill to any project. No config files, no framework lock-in.</p>
+    </div>
+  </section>
+
+  <!-- ============ SETUP CONTENT ============ -->
+  <section class="section-accent">
+    <div class="container">
+      <div class="setup-bento-grid">
+        <div class="setup-bento-cell reveal">
+          <div class="setup-bento-index">STEP 01</div>
+          <h3>Install</h3>
+          <p>Add Comfy Skill to your session with a single npx command. Works with any agent that supports SKILL.md files.</p>
+          <div class="setup-code-block">
+            <code><span class="code-comment"># Install Comfy Skill</span>
+    npx skills add https://github.com/Seive27/comfy-skill.git --skill <span class="code-string">"comfy-skill-frontend"</span></code>
+          </div>
+        </div>
+
+        <div class="setup-bento-cell setup-bento-cell-accent reveal reveal-delay-1">
+          <div class="setup-bento-index">STEP 02</div>
+          <h3>Configure</h3>
+          <p>Set your brand constraints and deploy the skill in your agent session. The skill reads automatically on each run.</p>
+          <div class="setup-code-block">
+            <code><span class="code-comment"># Load in your agent prompt</span>
+    I have loaded Comfy Skill v1
+    as my only source of frontend
+    design rules.</code>
+          </div>
+        </div>
+
+        <div class="setup-bento-cell reveal reveal-delay-2">
+          <div class="setup-bento-index">STEP 03</div>
+          <h3>Generate</h3>
+          <p>Define your page kind, audience, and brand vibe. Comfy Skill analyzes the brief and generates a taste profile, skill graph, and rendering strategy.</p>
+          <div class="setup-code-block">
+            <code><span class="code-comment"># Example brief</span>
+    Brief:
+    <span class="code-command">* Page kind:</span> landing
+    <span class="code-command">* Product:</span> Comfy Skill
+    <span class="code-command">* Brand vibe:</span> playful,
+      cozy-tech, retro-futuristic
+    <span class="code-command">* Avoid:</span> generic AI SaaS
+      patterns, purple gradients</code>
+          </div>
+        </div>
+      </div>
+
+      <div class="setup-tip reveal reveal-delay-3">
+        <span class="setup-tip-icon">&gt;&gt;</span>
+        <span>You can also install the full bundle with <code style="color:var(--green);font-size:0.65rem;">npx skills add Seive27/comfy-skill</code> to load every skill in the repository at once.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPATIBLE AGENTS ============ -->
+  <section class="section-accent" style="background:var(--bg-surface);">
+    <div class="container">
+      <div class="section-label reveal">AGENTS</div>
+      <h2 style="margin-bottom:16px;">Works with every major AI coding agent</h2>
+      <p style="margin-bottom:32px;font-size:0.85rem;">Drop the SKILL.md into any agent that supports file-based directives.</p>
+      <div class="docs-agents" style="margin-bottom:0;">
+        <span class="docs-agent-pill">Cursor</span>
+        <span class="docs-agent-pill">Claude Code</span>
+        <span class="docs-agent-pill">Codex</span>
+        <span class="docs-agent-pill">Antigravity</span>
+        <span class="docs-agent-pill">Gemini CLI</span>
+        <span class="docs-agent-pill">AI Studio</span>
+        <span class="docs-agent-pill">v0</span>
+        <span class="docs-agent-pill">Lovable</span>
+        <span class="docs-agent-pill">OpenCode</span>
+        <span class="docs-agent-pill">OpenClaw</span>
+        <span class="docs-agent-pill">Windsurf</span>
+        <span class="docs-agent-pill">Copilot</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content reveal">
+        <h2>Ready to ship better UI?</h2>
+        <p>
+          Install Comfy Skill and stop shipping AI-looking interfaces.
+          One command and you're in.
+        </p>
+        <div class="cta-actions">
+          <a href="docs.html" class="btn btn-primary">Read the docs</a>
+          <a href="https://github.com/Seive27/comfy-skill.git" target="_blank" rel="noopener" class="btn btn-secondary">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-text">[CS] Comfy Skill &reg;</div>
+          <p class="footer-desc">
+            An anti-slop frontend framework that transforms AI agent outputs
+            into structured skills, deterministic interfaces, and reliable user experiences.
+          </p>
+          <p style="font-family:var(--font-mono);font-size:0.55rem;color:var(--text-tertiary);margin-top:16px;">
+            &copy; 2026 Comfy Skill. Open source.
+          </p>
+        </div>
+        <div>
+          <div class="footer-heading">Pages</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="docs.html">Docs</a></li>
+            <li><a href="setup.html">Setup</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Community</div>
+          <ul class="footer-links">
+            <li><a href="https://github.com/Seive27/comfy-skill.git" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Discord</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Resources</div>
+          <ul class="footer-links">
+            <li><a href="#">Taste Skill</a></li>
+            <li><a href="#">Anti-Slop Guide</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>/// SYSTEM: ONLINE &nbsp;//&nbsp; BUILD: 24.06 &nbsp;//&nbsp; PID: 0xCS1</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="Twitter">X</a>
+          <a href="#" aria-label="Discord">Discord</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var reveals = document.querySelectorAll('.reveal');
+      if (reveals.length) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+          });
+        }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+        reveals.forEach(function(el) { observer.observe(el); });
+      }
+      var toggleBtn = document.querySelector('.nav-mobile-toggle');
+      var navLinks = document.querySelector('.nav-links');
+      if (toggleBtn && navLinks) {
+        toggleBtn.addEventListener('click', function() {
+          navLinks.classList.toggle('open');
+          toggleBtn.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+          toggleBtn.textContent = navLinks.classList.contains('open') ? 'CLOSE' : 'MENU';
+        });
+        navLinks.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            navLinks.classList.remove('open');
+            toggleBtn.setAttribute('aria-expanded', 'false');
+            toggleBtn.textContent = 'MENU';
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

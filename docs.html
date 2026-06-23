@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COMFY SKILL /// DOCS</title>
+  <meta name="description" content="Comfy Skill documentation - installation, configuration, and API reference." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav" id="nav" role="navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Comfy Skill home">
+        <span class="nav-logo-mark" style="color:var(--red);">[CS]</span>
+        <span>Comfy Skill</span>
+        <span class="nav-badge">v1.0</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="docs.html" class="active">Docs</a></li>
+        <li><a href="setup.html">Setup</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="https://github.com/Seive27/comfy-skill.git" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+      <button class="nav-mobile-toggle" aria-label="Menu" aria-expanded="false">MENU</button>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <section class="page-header section-accent">
+    <div class="container">
+      <div class="section-label">DOCS</div>
+      <h1>Getting started</h1>
+      <p>Install Comfy Skill, understand how the skill reads a brief, and learn the rules it enforces.</p>
+    </div>
+  </section>
+
+  <!-- ============ DOCS CONTENT ============ -->
+  <section class="docs">
+    <div class="container">
+      <!-- --- Installation --- -->
+      <div class="docs-section reveal">
+        <div class="docs-section-label">/// INSTALLATION</div>
+        <h3>One command to start</h3>
+        <p class="docs-section-desc">The default install pulls the core skill. Works with any agent that supports SKILL.md files.</p>
+
+        <div class="docs-cards-grid">
+          <div class="docs-card">
+            <div class="docs-card-index">01</div>
+            <h4>Default Install</h4>
+            <p>Adds a SKILL.md file to your project. The agent reads it automatically.</p>
+            <div class="docs-code-block">
+              <code><span class="code-command">npx</span> skills add https://github.com/Seive27/comfy-skill.git <span class="code-command">--skill</span> <span class="code-string">"comfy-skill-frontend"</span></code>
+              <button class="hero-terminal-btn" data-copy='npx skills add https://github.com/Seive27/comfy-skill.git --skill "comfy-skill-frontend"'>Copy</button>
+            </div>
+          </div>
+
+          <div class="docs-card">
+            <div class="docs-card-index docs-card-index-red">02</div>
+            <h4>Full Bundle</h4>
+            <p>Install every skill in the repo with a single command.</p>
+            <div class="docs-code-block">
+              <code><span class="code-command">npx</span> skills add Seive27/comfy-skill</code>
+              <button class="hero-terminal-btn" data-copy="npx skills add Seive27/comfy-skill">Copy</button>
+            </div>
+          </div>
+
+          <div class="docs-card">
+            <div class="docs-card-index">03</div>
+            <h4>Codex Install</h4>
+            <p>Install into the Codex skills directory directly.</p>
+            <div class="docs-code-block">
+              <code><span class="code-command">npx</span> skills add Seive27/comfy-skill <span class="code-command">-a</span> codex</code>
+              <button class="hero-terminal-btn" data-copy="npx skills add Seive27/comfy-skill -a codex">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="docs-tip">
+          <span class="docs-tip-icon">&gt;&gt;</span>
+          <span>You can also copy any SKILL.md into your project, or paste it into ChatGPT or Codex conversations.</span>
+        </div>
+      </div>
+
+      <!-- --- Compatible Agents --- -->
+      <div class="docs-section reveal">
+        <div class="docs-section-label">/// COMPATIBLE AGENTS</div>
+        <h3>Works with every major AI coding agent</h3>
+        <div class="docs-agents">
+          <span class="docs-agent-pill">Cursor</span>
+          <span class="docs-agent-pill">Claude Code</span>
+          <span class="docs-agent-pill">Codex</span>
+          <span class="docs-agent-pill">Antigravity</span>
+          <span class="docs-agent-pill">Gemini CLI</span>
+          <span class="docs-agent-pill">AI Studio</span>
+          <span class="docs-agent-pill">v0</span>
+          <span class="docs-agent-pill">Lovable</span>
+          <span class="docs-agent-pill">OpenCode</span>
+          <span class="docs-agent-pill">OpenClaw</span>
+          <span class="docs-agent-pill">Windsurf</span>
+          <span class="docs-agent-pill">Copilot</span>
+        </div>
+      </div>
+
+      <!-- --- How It Works --- -->
+      <div class="docs-section reveal">
+        <div class="docs-section-label">/// HOW IT WORKS</div>
+        <h3>The skill reads the brief first</h3>
+        <p class="docs-section-desc">
+          Comfy Skill infers the right layout variance, motion, and density from cues like
+          "minimalist", "editorial", "SaaS", or "portfolio", then picks the design direction.
+        </p>
+
+        <div class="docs-features">
+          <div class="docs-feature">
+            <div class="docs-feature-marker">01</div>
+            <div class="docs-feature-text">
+              <h4>Brief inference</h4>
+              <p>Reads the page kind, vibe words, audience, references, and brand assets before any code. Declares a one-line design read instead of defaulting to AI-purple gradients and three centered feature cards.</p>
+            </div>
+          </div>
+          <div class="docs-feature">
+            <div class="docs-feature-marker">02</div>
+            <div class="docs-feature-text">
+              <h4>Brief to design system map</h4>
+              <p>When the brief reads as Material, Fluent, Carbon, Polaris, or Tailwind, the agent reaches for the official package. Aesthetic-only briefs are labeled honestly as web approximations.</p>
+            </div>
+          </div>
+          <div class="docs-feature">
+            <div class="docs-feature-marker">03</div>
+            <div class="docs-feature-text">
+              <h4>Animation skeletons</h4>
+              <p>Canonical code patterns for sticky-stack, horizontal-pan, and scroll-reveal stagger. Hand-rolled scroll listeners and rAF loops touching React state are out.</p>
+            </div>
+          </div>
+          <div class="docs-feature">
+            <div class="docs-feature-marker">04</div>
+            <div class="docs-feature-text">
+              <h4>Dark mode protocol</h4>
+              <p>Dual-mode by default. WCAG AA contrast, hierarchy parity, brand fidelity in both themes. Off-black and off-white, never pure values.</p>
+            </div>
+          </div>
+          <div class="docs-feature">
+            <div class="docs-feature-marker">05</div>
+            <div class="docs-feature-text">
+              <h4>Big bans</h4>
+              <p>Strict list of the patterns that make generated frontends look the same. The agent enforces these on every output.</p>
+            </div>
+          </div>
+          <div class="docs-feature">
+            <div class="docs-feature-marker">06</div>
+            <div class="docs-feature-text">
+              <h4>Redesign protocol</h4>
+              <p>Audit-first on existing projects. Greenfield, preserve, or overhaul mode. URL structure, nav labels, and form field names never change silently.</p>
+            </div>
+          </div>
+          <div class="docs-feature">
+            <div class="docs-feature-marker">07</div>
+            <div class="docs-feature-text">
+              <h4>Block library schema</h4>
+              <p>Schema for real, source-backed blocks: hero, feature, social-proof, pricing, CTA, footer, portfolio, transition, navigation.</p>
+            </div>
+          </div>
+          <div class="docs-feature">
+            <div class="docs-feature-marker">08</div>
+            <div class="docs-feature-text">
+              <h4>Hard pre-flight check</h4>
+              <p>Every checkbox must honestly pass before the agent ships. No box, no ship.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- --- The Locks --- -->
+      <div class="docs-section reveal">
+        <div class="docs-section-label">/// THE LOCKS</div>
+        <h3>Rules the agent never relaxes</h3>
+        <p class="docs-section-desc">Three rules keep a generated page visually coherent end to end.</p>
+
+        <div class="docs-lock-grid">
+          <div class="docs-lock-card">
+            <div class="docs-lock-icon">[ C ]</div>
+            <h4>Color Consistency Lock</h4>
+            <p>One accent across the whole page. A warm-grey site does not suddenly get a blue CTA in section 7.</p>
+          </div>
+          <div class="docs-lock-card">
+            <div class="docs-lock-icon">[ S ]</div>
+            <h4>Shape Consistency Lock</h4>
+            <p>One radius system per page. All-sharp, all-soft, or all-pill, with a documented exception when mixing.</p>
+          </div>
+          <div class="docs-lock-card">
+            <div class="docs-lock-icon">[ T ]</div>
+            <h4>Page Theme Lock</h4>
+            <p>Light, dark, or auto, picked once at the page level. No mid-page flips into a different theme.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- --- Hero Discipline --- -->
+      <div class="docs-section reveal">
+        <div class="docs-section-label">/// HERO DISCIPLINE</div>
+        <h3>Hard rules for above the fold</h3>
+        <div class="docs-rules">
+          <div class="docs-rule">
+            <span class="docs-rule-label">Headline</span>
+            <span class="docs-rule-value">Maximum two lines on desktop</span>
+          </div>
+          <div class="docs-rule">
+            <span class="docs-rule-label">Subtext</span>
+            <span class="docs-rule-value">Maximum twenty words and four lines</span>
+          </div>
+          <div class="docs-rule">
+            <span class="docs-rule-label">Primary CTA</span>
+            <span class="docs-rule-value">Visible without scroll</span>
+          </div>
+          <div class="docs-rule">
+            <span class="docs-rule-label">Navigation</span>
+            <span class="docs-rule-value">Single line at desktop, height maximum 80px</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- --- Ban System --- -->
+      <div class="docs-section reveal">
+        <div class="docs-section-label">/// BAN SYSTEM</div>
+        <h3>Patterns the agent enforces</h3>
+        <p class="docs-section-desc">The full list ships in the SKILL.md file. These are the most commonly triggered bans.</p>
+
+        <div class="docs-bans">
+          <div class="docs-ban">
+            <div class="docs-ban-name">Em-dashes and en-dashes</div>
+            <div class="docs-ban-desc">Banned everywhere in output copy. Use a hyphen or restructure the sentence.</div>
+          </div>
+          <div class="docs-ban">
+            <div class="docs-ban-name">Section-numbering eyebrows</div>
+            <div class="docs-ban-desc">00 / INDEX, 001 - Capabilities. Eyebrows should name the topic in plain language.</div>
+          </div>
+          <div class="docs-ban">
+            <div class="docs-ban-name">Hero version labels</div>
+            <div class="docs-ban-desc">V0.6, BETA, INVITE-ONLY in the hero is banned unless the brief is explicitly a product launch.</div>
+          </div>
+          <div class="docs-ban">
+            <div class="docs-ban-name">Photo-credit captions as decoration</div>
+            <div class="docs-ban-desc">Real attribution to real photographers only. No fabricated credits.</div>
+          </div>
+          <div class="docs-ban">
+            <div class="docs-ban-name">Hero decoration text strips</div>
+            <div class="docs-ban-desc">BRAND. MOTION. SPATIAL. and similar mono-caps strips at the hero bottom are banned.</div>
+          </div>
+          <div class="docs-ban">
+            <div class="docs-ban-name">Scroll cues</div>
+            <div class="docs-ban-desc">Scroll, down-arrow icons, Scroll to explore. The user knows how scroll works.</div>
+          </div>
+          <div class="docs-ban">
+            <div class="docs-ban-name">Three-equal-card feature rows</div>
+            <div class="docs-ban-desc">Banned by default. Use 2-column zig-zag, asymmetric grids, or scroll-pinned alternatives.</div>
+          </div>
+          <div class="docs-ban">
+            <div class="docs-ban-name">AI-purple gradients</div>
+            <div class="docs-ban-desc">Banned by default. Neutral bases with one high-contrast accent. Override only when brand is explicitly purple.</div>
+          </div>
+          <div class="docs-ban">
+            <div class="docs-ban-name">window.addEventListener('scroll')</div>
+            <div class="docs-ban-desc">Banned in JS. Use IntersectionObserver, CSS scroll-driven animations.</div>
+          </div>
+          <div class="docs-ban">
+            <div class="docs-ban-name">Div-based fake product UI</div>
+            <div class="docs-ban-desc">No fake task lists, terminals, or dashboards built out of styled divs. Use real screenshots or generated images.</div>
+          </div>
+        </div>
+
+        <p class="docs-bans-more">
+          <a href="https://github.com/Seive27/comfy-skill.git" target="_blank" rel="noopener">View the full ban list on GitHub</a>
+        </p>
+      </div>
+
+      <!-- --- Skill Files --- -->
+      <div class="docs-section reveal">
+        <div class="docs-section-label">/// SKILL FILES</div>
+        <h3>The repo bundles multiple SKILL.md files</h3>
+        <p class="docs-section-desc">Enable the ones that match your stack.</p>
+
+        <div class="docs-lock-grid">
+          <div class="docs-lock-card">
+            <h4>comfy-skill-frontend</h4>
+            <p>Reads the brief, infers the right design direction, and ships interfaces that do not look templated. Brief inference, design-system map, complete em-dash ban, redesign-audit protocol, strict pre-flight check.</p>
+          </div>
+          <div class="docs-lock-card">
+            <h4>gpt-comfyskill</h4>
+            <p>Stricter variant for GPT and Codex models with higher layout variance, stronger motion direction, and tighter anti-slop checks.</p>
+          </div>
+          <div class="docs-lock-card">
+            <h4>redesign-skill</h4>
+            <p>Six-category site audit for upgrading existing projects. Finds generic patterns and guides fixes.</p>
+          </div>
+          <div class="docs-lock-card">
+            <h4>soft-skill</h4>
+            <p>Calm, polished UI with softer contrast, more whitespace, and spring-style motion.</p>
+          </div>
+          <div class="docs-lock-card">
+            <h4>minimalist-skill</h4>
+            <p>Editorial product UI inspired by Linear, with restrained palette and tighter hierarchy.</p>
+          </div>
+          <div class="docs-lock-card">
+            <h4>brutalist-skill</h4>
+            <p>Swiss typography, raw structure, and sharper contrast for mechanical visual language.</p>
+          </div>
+          <div class="docs-lock-card">
+            <h4>output-skill</h4>
+            <p>Anti-laziness rules for agents. Blocks placeholder comments, skipped sections, and half-finished output.</p>
+          </div>
+          <div class="docs-lock-card">
+            <h4>image-to-code-skill</h4>
+            <p>Image-first pipeline: generate reference frames, analyze them, then implement the frontend to match.</p>
+          </div>
+          <div class="docs-lock-card">
+            <h4>imagegen-frontend-web</h4>
+            <p>Image-only skill generating horizontal website section reference frames for handoff coding agents.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- --- Customization --- -->
+      <div class="docs-section reveal">
+        <div class="docs-section-label">/// CUSTOMIZATION</div>
+        <h3>Edit the skill to match your brand</h3>
+        <p class="docs-section-desc">
+          The SKILL.md file is fully editable. Open it in your project root and modify, add, or remove
+          any rule to match your design direction. The agent reads the file on each run, so edits apply
+          on the next generation.
+        </p>
+        <div class="docs-tip">
+          <span class="docs-tip-icon">&gt;&gt;</span>
+          <span>If you maintain a project-specific style guide, paste it at the top of the SKILL.md and the agent will use it as the dominant source of truth.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-text">[CS] Comfy Skill &reg;</div>
+          <p class="footer-desc">
+            An anti-slop frontend framework that transforms AI agent outputs
+            into structured skills, deterministic interfaces, and reliable user experiences.
+          </p>
+          <p style="font-family:var(--font-mono);font-size:0.55rem;color:var(--text-tertiary);margin-top:16px;">
+            &copy; 2026 Comfy Skill. Open source.
+          </p>
+        </div>
+        <div>
+          <div class="footer-heading">Pages</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="docs.html">Docs</a></li>
+            <li><a href="setup.html">Setup</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Community</div>
+          <ul class="footer-links">
+            <li><a href="https://github.com/Seive27/comfy-skill.git" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Discord</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Resources</div>
+          <ul class="footer-links">
+            <li><a href="#">Taste Skill</a></li>
+            <li><a href="#">Anti-Slop Guide</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>/// SYSTEM: ONLINE &nbsp;//&nbsp; BUILD: 24.06 &nbsp;//&nbsp; PID: 0xCS1</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="Twitter">X</a>
+          <a href="#" aria-label="Discord">Discord</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var reveals = document.querySelectorAll('.reveal');
+      if (reveals.length) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+          });
+        }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+        reveals.forEach(function(el) { observer.observe(el); });
+      }
+      var toggleBtn = document.querySelector('.nav-mobile-toggle');
+      var navLinks = document.querySelector('.nav-links');
+      if (toggleBtn && navLinks) {
+        toggleBtn.addEventListener('click', function() {
+          navLinks.classList.toggle('open');
+          toggleBtn.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+          toggleBtn.textContent = navLinks.classList.contains('open') ? 'CLOSE' : 'MENU';
+        });
+        navLinks.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            navLinks.classList.remove('open');
+            toggleBtn.setAttribute('aria-expanded', 'false');
+            toggleBtn.textContent = 'MENU';
+          });
+        });
+      }
+      var copyBtns = document.querySelectorAll('.hero-terminal-btn');
+      function copyText(text, btn) {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(text).then(function() {
+            btn.textContent = 'COPIED'; btn.classList.add('copied');
+            setTimeout(function() { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+          }).catch(function() { fallbackCopy(text, btn); });
+        } else { fallbackCopy(text, btn); }
+      }
+      function fallbackCopy(text, btn) {
+        var textarea = document.createElement('textarea');
+        textarea.value = text; textarea.style.position = 'fixed'; textarea.style.opacity = '0';
+        document.body.appendChild(textarea); textarea.select(); document.execCommand('copy');
+        document.body.removeChild(textarea);
+        btn.textContent = 'COPIED'; btn.classList.add('copied');
+        setTimeout(function() { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+      }
+      copyBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var text = btn.getAttribute('data-copy');
+          if (!text) return; copyText(text, btn);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

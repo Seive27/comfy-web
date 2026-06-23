@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COMFY SKILL /// COMFY JOURNAL</title>
+  <meta name="description" content="Comfy Journal - engineering, architecture, and philosophy behind Comfy Skill." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav" id="nav" role="navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Comfy Skill home">
+        <span class="nav-logo-mark" style="color:var(--red);">[CS]</span>
+        <span>Comfy Skill</span>
+        <span class="nav-badge">v1.0</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="setup.html">Setup</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="https://github.com/Seive27/comfy-skill.git" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+      <button class="nav-mobile-toggle" aria-label="Menu" aria-expanded="false">MENU</button>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <section class="page-header section-accent">
+    <div class="container">
+      <div class="section-label">BLOG</div>
+      <h1>Comfy Journal</h1>
+      <p>Engineering notes, architectural deep dives, and the thinking behind Comfy Skill.</p>
+    </div>
+  </section>
+
+  <!-- ============ BLOG POSTS ============ -->
+  <section class="section-accent">
+    <div class="container">
+      <div class="blog-grid">
+        <article class="blog-card reveal">
+          <div class="blog-meta">2026-06-23 &nbsp;//&nbsp; 4 min read</div>
+          <h3>Why every AI-generated site looks the same</h3>
+          <p>
+            Purple gradients, floating orbs, three-column feature cards, Inter at 16px.
+            The AI design fingerprint is so consistent that users now spot it in under a second.
+            We analyzed 200 AI-generated landing pages and found the same 12 patterns in over
+            90% of them. Here is what they are and how to break out of the template.
+          </p>
+        </article>
+
+        <article class="blog-card reveal reveal-delay-1">
+          <div class="blog-meta">2026-06-18 &nbsp;//&nbsp; 6 min read</div>
+          <h3>Introducing Skill Graphs</h3>
+          <p>
+            The fundamental problem with AI-generated UI is not quality. It is determinism.
+            Same prompt, two different outputs. That unpredictability makes AI-generated
+            interfaces unreliable for production. Skill graphs solve this by routing agent
+            intent through predefined, versioned, and testable nodes. Every output is
+            reproducible. Here is how the architecture works under the hood.
+          </p>
+        </article>
+
+        <article class="blog-card reveal reveal-delay-2">
+          <div class="blog-meta">2026-06-15 &nbsp;//&nbsp; 5 min read</div>
+          <h3>Why Comfy Skill exists</h3>
+          <p>
+            I kept seeing AI-generated websites that technically worked but felt assembled from
+            the same template. Every hero looked familiar. Every feature section looked copied.
+            Comfy Skill started as an attempt to make AI-generated interfaces follow a process
+            instead of chasing aesthetics. This is the story of why we built it.
+          </p>
+        </article>
+
+        <article class="blog-card reveal reveal-delay-2">
+          <div class="blog-meta">2026-06-12 &nbsp;//&nbsp; 4 min read</div>
+          <h3>Deterministic rendering: why your UI should never drift</h3>
+          <p>
+            Non-deterministic output is the silent killer of trust in AI-generated interfaces.
+            When the same brief produces different layouts on subsequent runs, users stop relying
+            on the tool. They regenerate until something looks right, then edit the rest by hand.
+            That is not automation. That is roulette. Deterministic rendering locks every output
+            to its input so regeneration is a reload, not a gamble.
+          </p>
+        </article>
+
+        <article class="blog-card reveal reveal-delay-3">
+          <div class="blog-meta">2026-06-09 &nbsp;//&nbsp; 7 min read</div>
+          <h3>Designing a frontend compiler for AI agents</h3>
+          <p>
+            Most prompt-to-UI tools treat generation as a one-shot black box: prompt in, HTML out.
+            We think that is the wrong abstraction. Comfy Skill compiles agent intents through
+            a multi-stage pipeline that parses, validates, routes, and renders. Each stage is
+            inspectable, testable, and independently versionable. Here is how the compiler works.
+          </p>
+        </article>
+
+        <article class="blog-card reveal reveal-delay-3">
+          <div class="blog-meta">2026-06-05 &nbsp;//&nbsp; 3 min read</div>
+          <h3>How we built the Comfy Skill ban system</h3>
+          <p>
+            We banned the em-dash not because em-dashes are bad, but because their overuse is
+            the single strongest signal that text was written by an LLM. The ban system in
+            Comfy Skill encodes 22 patterns that make generated content feel unedited. It is
+            not about aesthetics. It is about removing the lowest-common-denominator patterns
+            before they reach your users.
+          </p>
+        </article>
+
+        <article class="blog-card reveal reveal-delay-4">
+          <div class="blog-meta">2026-05-30 &nbsp;//&nbsp; 5 min read</div>
+          <h3>Measuring slop: a framework for evaluating generated interfaces</h3>
+          <p>
+            You cannot fix what you cannot measure. We developed a quantitative framework for
+            scoring AI-generated interfaces on seven axes: layout variance, color cohesion,
+            typographic hierarchy, component repetition, motion consistency, content originality,
+            and accessibility coverage. Here is the rubric we use to audit every output.
+          </p>
+        </article>
+
+        <article class="blog-card reveal reveal-delay-4">
+          <div class="blog-meta">2026-05-22 &nbsp;//&nbsp; 2 min read</div>
+          <h3>Comfy Skill is now open source</h3>
+          <p>
+            We released the entire skill library under an open source license. Every SKILL.md
+            file, every rule, every ban. You can fork them, modify them, or submit pull requests.
+            No black boxes, no vendor lock-in, no magic.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-text">[CS] Comfy Skill &reg;</div>
+          <p class="footer-desc">
+            An anti-slop frontend framework that transforms AI agent outputs
+            into structured skills, deterministic interfaces, and reliable user experiences.
+          </p>
+          <p style="font-family:var(--font-mono);font-size:0.55rem;color:var(--text-tertiary);margin-top:16px;">
+            &copy; 2026 Comfy Skill. Open source.
+          </p>
+        </div>
+        <div>
+          <div class="footer-heading">Pages</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="docs.html">Docs</a></li>
+            <li><a href="setup.html">Setup</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Community</div>
+          <ul class="footer-links">
+            <li><a href="https://github.com/Seive27/comfy-skill.git" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Discord</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Resources</div>
+          <ul class="footer-links">
+            <li><a href="#">Taste Skill</a></li>
+            <li><a href="#">Anti-Slop Guide</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>/// SYSTEM: ONLINE &nbsp;//&nbsp; BUILD: 24.06 &nbsp;//&nbsp; PID: 0xCS1</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="Twitter">X</a>
+          <a href="#" aria-label="Discord">Discord</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var reveals = document.querySelectorAll('.reveal');
+      if (reveals.length) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+          });
+        }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+        reveals.forEach(function(el) { observer.observe(el); });
+      }
+      var toggleBtn = document.querySelector('.nav-mobile-toggle');
+      var navLinks = document.querySelector('.nav-links');
+      if (toggleBtn && navLinks) {
+        toggleBtn.addEventListener('click', function() {
+          navLinks.classList.toggle('open');
+          toggleBtn.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+          toggleBtn.textContent = navLinks.classList.contains('open') ? 'CLOSE' : 'MENU';
+        });
+        navLinks.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            navLinks.classList.remove('open');
+            toggleBtn.setAttribute('aria-expanded', 'false');
+            toggleBtn.textContent = 'MENU';
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
